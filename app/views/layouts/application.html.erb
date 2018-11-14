@@ -10,6 +10,15 @@
   </head>
 
   <body>
+    <header>
+      <% if current_user %>
+        <%= current_user.email %> |
+        <%= link_to('logout', sessions_path, method: :delete) %>
+      <% else %>
+        <%= link_to('login', new_sessions_path) %> or
+        <%= link_to('sign in', new_user_path) %>
+      <% end %>
+    </header>
     <%= yield %>
   </body>
 </html>
