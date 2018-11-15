@@ -1,4 +1,6 @@
 class SessionsController < ApplicationController
+  skip_before_action :require_login, only: [:new, :create]
+
   def new
     @session = Session.new
   end
@@ -7,7 +9,7 @@ class SessionsController < ApplicationController
     @session = Session.new(params.require(:session).permit(:email, :password))
 
     if @session.validate && login(@session.email, @session.password)
-      redirect_to(root_path)
+      redirect_back_or_to(home_path)
     else
       render(action: :new)
     end
