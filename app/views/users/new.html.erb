@@ -1,0 +1,13 @@
+<h1>Users#new</h1>
+
+<%= form_for(@user) do |f| %>
+  <div>
+    <%= f.text_field(:email) %>
+    <% @user.errors[:email].each do |message| %><%= message %><br><% end %>
+  </div>
+  <div>
+    <%= f.password_field(:password) %>
+    <% @user.errors[:password].each do |message| %><%= message %><br><% end %>
+  </div>
+  <%= f.submit %>
+<% end %>
