@@ -17,7 +17,7 @@ RSpec.describe SessionsController, type: :controller do
 
     context "with valid params" do
       before { post_with(email: 'alice@example.com', password: '3bt2[J!') }
-      it { expect(response).to redirect_to(root_path) }
+      it { expect(response).to redirect_to(home_path) }
       it { expect(controller).to be_logged_in }
     end
 
