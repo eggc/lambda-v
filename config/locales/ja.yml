@@ -34,10 +34,9 @@ ja:
         wrong_length: は%{count}文字で入力してください
         other_than: は%{count}以外の値にしてください
 # views
-  root:
-    index:
+  layouts:
+    application:
       title: ΛV
-      message: ラムダV へようこそ
   users:
     new:
       title: アカウント新規登録
@@ -46,6 +45,7 @@ ja:
     new:
       title: ログイン
       submit: ログイン
+      message: アカウントをお持ちでない場合は <a href=%{link}>新規登録</a> よりご登録ください
   home:
     index:
       title: ホーム
