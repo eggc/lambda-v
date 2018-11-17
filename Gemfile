@@ -13,6 +13,7 @@ gem 'sorcery', '~> 0.12.0'
 gem 'bootstrap', '~> 4.1.3'
 gem 'bootstrap_form', '~> 4.0.0'
 gem 'jquery-rails', '~> 4.3.3' # dependency for bootstrap in rails5.1+
+gem 'turbolinks', '~> 5.2.0'
 
 group :development, :test do
   gem 'pry-byebug'
