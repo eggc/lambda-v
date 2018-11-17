@@ -1,4 +1,7 @@
 en:
+  layouts:
+    application:
+      title: ΛV
   root:
     index:
       title: ΛV
