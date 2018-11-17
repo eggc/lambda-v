@@ -1,13 +1,7 @@
 <h1><%= t('.title') %></h1>
 
-<%= form_for(@user) do |f| %>
-  <div>
-    <%= f.text_field(:email) %>
-    <% @user.errors[:email].each do |message| %><%= message %><br><% end %>
-  </div>
-  <div>
-    <%= f.password_field(:password) %>
-    <% @user.errors[:password].each do |message| %><%= message %><br><% end %>
-  </div>
+<%= bootstrap_form_for(@user) do |f| %>
+  <%= f.text_field(:email) %>
+  <%= f.password_field(:password) %>
   <%= f.submit(t('.submit')) %>
 <% end %>

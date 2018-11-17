@@ -11,19 +11,21 @@
   </head>
 
   <body>
-    <header>
-      <% if current_user %>
+    <div class="container">
+      <header>
+        <% if current_user %>
         User: <%= current_user.email %> |
         <%= link_to('logout', sessions_path, method: :delete) %>
-      <% else %>
+        <% else %>
         <%= link_to('login', new_sessions_path) %> or
         <%= link_to('sign in', new_user_path) %>
-      <% end %>
-      [
-      <%= link_to('EN', url_for(locale: 'en')) %> /
-      <%= link_to('JA', url_for(locale: 'ja')) %>
-      ]
-    </header>
-    <%= yield %>
+        <% end %>
+        [
+        <%= link_to('EN', url_for(locale: 'en')) %> /
+        <%= link_to('JA', url_for(locale: 'ja')) %>
+        ]
+      </header>
+      <%= yield %>
+    </div>
   </body>
 </html>
