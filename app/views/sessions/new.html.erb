@@ -1,4 +1,4 @@
-<h1>Sessions#new</h1>
+<h1><%= t('.title') %></h1>
 
 <%= form_for(@session) do |f| %>
   <div>
@@ -9,5 +9,5 @@
     <%= f.password_field(:password) %>
     <% @session.errors[:password].each do |message| %><%= message %><br><% end %>
   </div>
-  <%= f.submit %>
+  <%= f.submit(t('.submit')) %>
 <% end %>
