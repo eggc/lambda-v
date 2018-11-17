@@ -1,4 +1,4 @@
-<h1>Users#new</h1>
+<h1><%= t('.title') %></h1>
 
 <%= form_for(@user) do |f| %>
   <div>
@@ -9,5 +9,5 @@
     <%= f.password_field(:password) %>
     <% @user.errors[:password].each do |message| %><%= message %><br><% end %>
   </div>
-  <%= f.submit %>
+  <%= f.submit(t('.submit')) %>
 <% end %>
