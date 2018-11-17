@@ -12,8 +12,9 @@ gem 'bootsnap', '>= 1.1.0', require: false
 gem 'sorcery', '~> 0.12.0'
 
 group :development, :test do
-  gem 'byebug'
-  gem 'rspec-rails', '~>3.8.1'
+  gem 'pry-byebug'
+  gem 'pry-rails', '~> 0.3.7'
+  gem 'rspec-rails', '~> 3.8.1'
 end
 
 group :development do
