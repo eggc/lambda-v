@@ -37,10 +37,6 @@ ja:
   layouts:
     application:
       title: ΛV
-  root:
-    index:
-      title: ΛV
-      message: ラムダV へようこそ
   users:
     new:
       title: アカウント新規登録
@@ -49,6 +45,7 @@ ja:
     new:
       title: ログイン
       submit: ログイン
+      message: アカウントをお持ちでない場合は <a href=%{link}>新規登録</a> よりご登録ください
   home:
     index:
       title: ホーム

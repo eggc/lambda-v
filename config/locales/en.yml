@@ -2,18 +2,15 @@ en:
   layouts:
     application:
       title: ΛV
-  root:
-    index:
-      title: ΛV
-      message: Welcome to lambda-v
   users:
     new:
-      title: Create Account
+      title: Sign up
       submit: Register
   sessions:
     new:
       title: Login
       submit: Login
+      message: If you do not have an account, please register from <a href=%{link}>sign up</a>
   home:
     index:
       title: Home
