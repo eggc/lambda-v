@@ -22,7 +22,7 @@ RSpec.describe SessionsController, type: :controller do
     end
 
     context 'with wrong password' do
-      before { post_with(email: 'alice@example.com', password: 'wrong-password') }
+      before { post_with(email: 'alice@example.com', password: 'wrong') }
       it { expect(response).to have_http_status(:success) }
       it { expect(controller).not_to be_logged_in }
     end
