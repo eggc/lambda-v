@@ -1,6 +1,6 @@
 <h1><%= t('.title') %></h1>
 <p><%== t('.message', link: new_user_path) %></p>
-<%= bootstrap_form_for(@session) do |f| %>
+<%= bootstrap_form_with(model: @session, local: true) do |f| %>
   <%= f.text_field(:email) %>
   <%= f.password_field(:password) %>
   <%= f.submit(t('.submit')) %>
