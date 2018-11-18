@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe RootController, type: :controller do
-  describe "GET #index" do
+  describe 'GET #index' do
     context 'without login' do
       before { get(:index) }
       it { expect(response).to redirect_to(new_sessions_path) }
