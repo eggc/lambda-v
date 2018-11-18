@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe HomeController, type: :controller do
-  describe "GET #index" do
+  describe 'GET #index' do
     context 'with logged in' do
       before { login_and_get(:index) }
       it { expect(response).to have_http_status(:success) }
