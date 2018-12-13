@@ -6,6 +6,9 @@ en:
     new:
       title: Sign up
       submit: Register
+    edit:
+      title: Edit Profile
+      submit: Save
   sessions:
     new:
       title: Login

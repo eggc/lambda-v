@@ -41,6 +41,9 @@ ja:
     new:
       title: アカウント新規登録
       submit: 新規登録
+    edit:
+      title: プロフィール編集
+      submit: 保存
   sessions:
     new:
       title: ログイン

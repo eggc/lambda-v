@@ -1,0 +1,7 @@
+<h1><%= t('.title') %></h1>
+
+<%= bootstrap_form_with(model: @user, local: true) do |f| %>
+  <%= f.text_field(:email) %>
+  <%= f.password_field(:password) %>
+  <%= f.submit(t('.submit')) %>
+<% end %>
