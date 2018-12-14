@@ -19,6 +19,7 @@ group :development, :test do
   gem 'pry-byebug'
   gem 'pry-rails', '~> 0.3.7'
   gem 'rspec-rails', '~> 3.8.1'
+  gem 'factory_bot_rails', '~> 4.11.1'
 end
 
 group :development do
