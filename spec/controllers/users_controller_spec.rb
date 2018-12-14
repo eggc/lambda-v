@@ -27,7 +27,7 @@ RSpec.describe UsersController, type: :controller do
 
   describe 'PATCH #update' do
     before do
-      @user = User.create(email: 'alice@example.com', password: '-30vfa')
+      @user = create(:user)
       @update_params = { id: @user.id, user: { email: 'new@example.com', password: 'xyz' }}
       @invalid_params = { id: @user.id, user: { email: '', password: '' }}
     end
