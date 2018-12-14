@@ -16,17 +16,17 @@ gem 'turbolinks', '~> 5.2.0'
 gem 'uglifier', '>= 1.3.0'
 
 group :development, :test do
+  gem 'factory_bot_rails', '~> 4.11.1'
   gem 'pry-byebug'
   gem 'pry-rails', '~> 0.3.7'
   gem 'rspec-rails', '~> 3.8.1'
-  gem 'factory_bot_rails', '~> 4.11.1'
 end
 
 group :development do
   gem 'listen', '>= 3.0.5', '< 3.2'
+  gem 'rails-erd'
   gem 'rubocop', '~> 0.60.0', require: false
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
   gem 'web-console', '>= 3.3.0'
-  gem 'rails-erd'
 end
