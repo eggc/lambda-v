@@ -15,6 +15,8 @@ gem 'pg', '~> 1.1.4'
 gem 'turbolinks', '~> 5.2.0'
 gem 'uglifier', '>= 1.3.0'
 
+gem 'twitter', "~> 6.2.0"
+
 group :development, :test do
   gem 'factory_bot_rails', '~> 4.11.1'
   gem 'pry-byebug'

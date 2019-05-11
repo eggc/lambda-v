@@ -3,6 +3,7 @@ require 'open-uri'
 class User < ApplicationRecord
   authenticates_with_sorcery!
   has_one_attached :icon
+  has_many :external_users
 
   validates :email, presence: true, uniqueness: true
   validates :password, presence: true, if: lambda {
@@ -25,5 +26,13 @@ class User < ApplicationRecord
 
     downloaded_image = open(url)
     icon.attach(io: downloaded_image, filename: File.basename(url))
+  end
+
+  def twitter_user
+    @twitter_user ||= external_users.find_by(provider: 'twitter')
+  end
+
+  def twitter_api
+    @twitter_api ||= TwitterAPI.new(twitter_user.token, twitter_user.secret)
   end
 end
