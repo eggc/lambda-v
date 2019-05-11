@@ -142,7 +142,7 @@ Rails.application.config.sorcery.configure do |config|
                                else
                                  "http://eggc.example.com:3000/oauth/callback?provider=google"
                                end
-  config.google.user_info_mapping = {:email => "email", :name => "name"}
+  config.google.user_info_mapping = {:email => "email", :name => "name", :icon_url => "picture"}
   config.google.scope = "https://www.googleapis.com/auth/userinfo.email https://www.googleapis.com/auth/userinfo.profile"
   #
   # For Microsoft Graph, the key will be your App ID, and the secret will be your app password/public key.
