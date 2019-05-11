@@ -1,1 +1,10 @@
-<h1><%= t('.title') %></h1>
+<h1 class="mt-5 mb-5"><%= t('.title') %></h1>
+
+<% current_user.twitter_api.client.home_timeline.each do |tweet| %>
+  <p>
+    <small><%= [tweet.user.name, tweet.user.screen_name].join("@") %></small>
+    <small><%= tweet.created_at %></small>
+  </p>
+  <p><%== tweet.text %></p>
+  <hr>
+<% end %>
