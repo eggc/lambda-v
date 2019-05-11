@@ -4,4 +4,5 @@
   <%= f.text_field(:email) %>
   <%= f.password_field(:password) %>
   <%= f.submit(t('.submit')) %>
+  <%= link_to(t('.login_by_google'), auth_at_provider_path(provider: :google)) %>
 <% end %>

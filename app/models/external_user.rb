@@ -1,0 +1,3 @@
+class ExternalUser < ApplicationRecord
+
+end
