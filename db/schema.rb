@@ -40,6 +40,8 @@ ActiveRecord::Schema.define(version: 2) do
     t.bigint "user_id", null: false
     t.string "uid", null: false
     t.string "provider", null: false
+    t.string "crypted_token"
+    t.string "crypted_secret"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["uid", "provider"], name: "index_external_users_on_uid_and_provider", unique: true
