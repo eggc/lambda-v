@@ -72,7 +72,7 @@ Rails.application.config.sorcery.configure do |config|
   # What providers are supported by this app, i.e. [:twitter, :facebook, :github, :linkedin, :xing, :google, :liveid, :salesforce, :slack] .
   # Default: `[]`
   #
-  config.external_providers = [:google]
+  config.external_providers = [:twitter, :google]
 
   # You can change it by your local ca_file. i.e. '/etc/pki/tls/certs/ca-bundle.crt'
   # Path to ca_file. By default use a internal ca-bundle.crt.
@@ -104,10 +104,14 @@ Rails.application.config.sorcery.configure do |config|
   # Twitter will not accept any requests nor redirect uri containing localhost,
   # make sure you use 0.0.0.0:3000 to access your app in development
   #
-  # config.twitter.key = ""
-  # config.twitter.secret = ""
-  # config.twitter.callback_url = "http://0.0.0.0:3000/oauth/callback?provider=twitter"
-  # config.twitter.user_info_mapping = {:email => "screen_name"}
+  config.twitter.key = Rails.application.credentials.twitter_auth[:key]
+  config.twitter.secret = Rails.application.credentials.twitter_auth[:secret]
+  config.twitter.callback_url = if Rails.env.production?
+                                 Rails.application.credentials.twitter_auth[:callback_url]
+                               else
+                                 "http://eggc.example.com:3000/oauth/callback?provider=twitter"
+                               end
+  config.twitter.user_info_mapping = {:name => "name", :email => "screen_name", :icon_url => "profile_image_url_https"}
   #
   # config.facebook.key = ""
   # config.facebook.secret = ""
@@ -371,7 +375,7 @@ Rails.application.config.sorcery.configure do |config|
     # Default: `5 * 60`
     #
     # user.reset_password_time_between_emails =
-    
+
     # access counter to a reset password page attribute name
     # Default: `:access_count_to_reset_password_page`
     #

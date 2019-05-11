@@ -50,6 +50,7 @@ ja:
       submit: ログイン
       message: アカウントをお持ちでない場合は <a href=%{link}>新規登録</a> よりご登録ください
       login_by_google: Google アカウントでログイン
+      login_by_twitter: Twitter アカウントでログイン
   home:
     index:
       title: ホーム
