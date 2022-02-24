@@ -7,7 +7,7 @@ gem 'bootsnap', '>= 1.1.0', require: false
 gem 'bootstrap', '~> 4.3.1'
 gem 'bootstrap_form', '~> 4.0.0'
 gem 'jquery-rails', '~> 4.3.3' # dependency for bootstrap in rails5.1+
-gem 'puma', '~> 3.11'
+gem 'puma', '~> 4.3'
 gem 'rails', '~> 5.2.1'
 gem 'sassc-rails', '~> 2.1.0'
 gem 'sorcery', '~> 0.12.0'
