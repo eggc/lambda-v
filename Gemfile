@@ -10,7 +10,7 @@ gem 'jquery-rails', '~> 4.3.3' # dependency for bootstrap in rails5.1+
 gem 'puma', '~> 4.3'
 gem 'rails', '~> 5.2.1'
 gem 'sassc-rails', '~> 2.1.0'
-gem 'sorcery', '~> 0.12.0'
+gem 'sorcery', '~> 0.15.0'
 gem 'sqlite3', '~> 1.3.13'
 gem 'turbolinks', '~> 5.2.0'
 gem 'uglifier', '>= 1.3.0'
